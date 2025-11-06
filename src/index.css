@@ -24,16 +24,18 @@ body{
   animation: true 0.5s ease-in-out forwards;
 }
 @keyframes true{
-  from{transform: translateX(50%); opacity: 0; pointer-events: none;}
-  to{transform: translateX(0%); opacity: 1; pointer-events: all;}
+  0%{transform: translateX(50%); opacity: 0; pointer-events: none; visibility: hidden; display: none;}
+  50%{transform: translateX(0%); opacity: 1; pointer-events: all; visibility: visible;}
+  100%{transform: translateX(0%); opacity: 1; pointer-events: all; visibility: visible;}
 }
 
 .HIDDEN{
   animation: false 0.5s ease-in-out forwards;
 }
 @keyframes false{
-  from{transform: translateX(0%); opacity: 1; pointer-events: all;}
-  to{transform: translateX(50%); opacity: 0; pointer-events: none;}
+  0%{transform: translateX(0%); opacity: 1; pointer-events: all; visibility: visible;}
+  50%{transform: translateX(50%); opacity: 0; pointer-events: none; visibility: hidden; display: none;}
+  100%{transform: translateX(50%); opacity: 0; pointer-events: none; visibility: hidden; display: none;}
 }
 
 .ACTIVE_LINK{
