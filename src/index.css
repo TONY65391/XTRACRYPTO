@@ -1,0 +1,67 @@
+@import "tailwindcss";
+*,html{
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  user-select: none;
+  transition: all 0.5s ease-in-out;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+  background: rgba(27, 27, 27, 27);
+}
+.LINK{
+  box-shadow: 0px 0px 5px orange;
+}
+.LINK:hover{
+  box-shadow: 0px 0px 10px orange;
+}
+.SUBMENU{
+  background: rgba(40, 40, 40, 27);
+}
+
+
+.VISIBLE{
+  animation: true 0.5s ease-in-out forwards;
+}
+@keyframes true{
+  from{transform: translateX(50%); opacity: 0; pointer-events: none;}
+  to{transform: translateX(0%); opacity: 1; pointer-events: all;}
+}
+
+.HIDDEN{
+  animation: false 0.5s ease-in-out forwards;
+}
+@keyframes false{
+  from{transform: translateX(0%); opacity: 1; pointer-events: all;}
+  to{transform: translateX(50%); opacity: 0; pointer-events: none;}
+}
+
+.ACTIVE_LINK{
+  color: orange;
+  font-weight: bold;
+}
+
+/* Mobile first */
+h1 { font-size: 2rem; }   /* 32px */
+h2 { font-size: 1.75rem; }/* 28px */
+h3 { font-size: 1.5rem; } /* 24px */
+h4 { font-size: 1.25rem; }/* 20px */
+p  { font-size: 1rem; }   /* 16px */
+
+/* Tablets (≥768px) */
+@media (min-width: 768px) {
+  h1 { font-size: 2.5rem; } /* 40px */
+  h2 { font-size: 2rem; }   /* 32px */
+  h3 { font-size: 1.75rem; }/* 28px */
+  h4 { font-size: 1.5rem; } /* 24px */
+  p  { font-size: 1.125rem; }/* 18px */
+}
+
+/* Desktops (≥1024px) */
+@media (min-width: 1024px) {
+  h1 { font-size: 3.5rem; } /* 56px */
+  h2 { font-size: 2.75rem; }/* 44px */
+  h3 { font-size: 2rem; }   /* 32px */
+  h4 { font-size: 1.5rem; } /* 24px */
+  p  { font-size: 1.125rem; }/* 18px */
+}
