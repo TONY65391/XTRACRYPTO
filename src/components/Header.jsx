@@ -31,7 +31,7 @@ export function Header(){
                 <div className={`w-[15px] h-[4px] ml-auto group-hover:bg-white rounded-md ${ isOpen ? `bg-white` : `bg-orange-500` }`}></div>
             </nav>
 
-            <div className={`absolute top-0 right-0 z-2 lg:hidden SUBMENU overflow-hidden py-5 text-white h-2/2 w-3/5 ${ isOpen ? `VISIBLE` : `HIDDEN` }`}>
+            <div className={`absolute top-0 right-0 z-2 lg:hidden SUBMENU overflow-hidden py-5 text-white h-screen w-3/5 ${ isOpen ? `VISIBLE` : `HIDDEN` }`}>
                 <div className="text-center flex items-center justify-between px-3"><h3>SubMenu</h3> <i class="fa-solid fa-xmark cursor-pointer hover:text-orange-500" onClick={() => {setIsOpen(!isOpen)}}></i></div>
                 <ul className="px-2">
                     <li><a href="#" className={`border-2 border-orange-500 hover:px-4 hover:bg-white hover:text-orange-500 rounded-md block mt-2 py-1 px-2`}>Home</a></li>
