@@ -7,22 +7,22 @@ export function Header(){
     const [isOpen, setIsOpen] = useState(false);
 
     return(
-        <header className="flex items-center justify-between p-5 relative">
+        <header className="flex items-center justify-between py-5 relative">
             <div className="w-2/5 md:w-1/6">
                 <img className="" src={Logo} alt="" />
             </div>
 
-            <ul className="flex items-center justify-between gap-10 text-white hidden lg:flex">
-                <li><a href="#" className="ACTIVE_LINK">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Pages</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact Us</a></li>
+            <ul className="flex items-center justify-between gap-10 text-white text-lg hidden lg:flex">
+                <li><a href="#" className="ACTIVE_LINK uppercase">Home</a></li>
+                <li><a href="#" className="hover:text-orange-400 uppercase">About Us</a></li>
+                <li><a href="#" className="hover:text-orange-400 uppercase">Services</a></li>
+                <li><a href="#" className="hover:text-orange-400 uppercase">Pages</a></li>
+                <li><a href="#" className="hover:text-orange-400 uppercase">Blog</a></li>
+                <li><a href="#" className="hover:text-orange-400 uppercase">Contact Us</a></li>
             </ul>
 
             <div className="hidden lg:flex">
-                <Link text="GET STARTED"/>
+                <Link text="GET STARTED" color="white" hover="black"/>
             </div>
 
             <nav className="lg:hidden flex flex-col group cursor-pointer gap-1 items-center justify-center w-fit " onClick={() => {setIsOpen(!isOpen)}}>
@@ -31,8 +31,8 @@ export function Header(){
                 <div className={`w-[15px] h-[4px] ml-auto group-hover:bg-white rounded-md ${ isOpen ? `bg-white` : `bg-orange-500` }`}></div>
             </nav>
 
-            <div className={`absolute top-0 right-0 z-2 lg:hidden SUBMENU overflow-hidden py-5 text-white h-screen w-3/5 ${ isOpen ? `VISIBLE` : `HIDDEN` }`}>
-                <div className="text-center flex items-center justify-between px-3"><h3>SubMenu</h3> <i class="fa-solid fa-xmark cursor-pointer hover:text-orange-500" onClick={() => {setIsOpen(!isOpen)}}></i></div>
+            <div className={`fixed top-0 right-0 z-2 lg:hidden SUBMENU overflow-hidden py-5 text-white h-screen w-3/5 ${ isOpen ? `VISIBLE` : `HIDDEN` }`}>
+                <div className="text-center flex items-center justify-between px-3"><h3>SubMenu</h3> <i class={`fa-solid fa-xmark cursor-pointer hover:text-orange-500 ${ isOpen ? `` : `text-orange-500` }`} onClick={() => {setIsOpen(!isOpen)}}></i></div>
                 <ul className="mt-15 px-2">
                     <li><a href="#" className={`border-2 border-orange-500 hover:px-4 hover:bg-white hover:text-orange-500 rounded-md block mt-2 py-1 px-2`}>Home</a></li>
                     <li><a href="#" className={`border-2 border-orange-500 hover:px-4 hover:bg-white hover:text-orange-500 rounded-md block mt-2 py-1 px-2`}>About Us</a></li>
