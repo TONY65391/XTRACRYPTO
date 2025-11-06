@@ -26,9 +26,9 @@ export function Header(){
             </div>
 
             <nav className="lg:hidden flex flex-col group cursor-pointer gap-1 items-center justify-center w-fit " onClick={() => {setIsOpen(!isOpen)}}>
-                <div className={`w-[25px] h-[4px] ml-auto group-hover:bg-white rounded-md ${ isOpen ? `bg-white` : `bg-orange-500` }`}></div>
-                <div className={`w-[20px] h-[4px] ml-auto group-hover:bg-white rounded-md ${ isOpen ? `bg-white` : `bg-orange-500` } `}></div>
-                <div className={`w-[15px] h-[4px] ml-auto group-hover:bg-white rounded-md ${ isOpen ? `bg-white` : `bg-orange-500` }`}></div>
+                <div className={`w-[25px] h-[4px] ml-auto group-hover:bg-white rounded-md ${ isOpen ? `bg-white w-[30px]` : `bg-orange-400` }`}></div>
+                <div className={`w-[20px] h-[4px] ml-auto group-hover:bg-white rounded-md ${ isOpen ? `bg-white w-[30px]` : `bg-orange-400` } `}></div>
+                <div className={`w-[15px] h-[4px] ml-auto group-hover:bg-white rounded-md ${ isOpen ? `bg-white w-[30px]` : `bg-orange-400` }`}></div>
             </nav>
 
             <div className={`fixed top-0 right-0 z-2 lg:hidden SUBMENU overflow-hidden py-5 text-white h-screen w-3/5 ${ isOpen ? `VISIBLE` : `HIDDEN` }`}>
