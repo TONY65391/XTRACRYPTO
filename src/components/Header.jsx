@@ -7,7 +7,7 @@ export function Header(){
     const [isOpen, setIsOpen] = useState(false);
 
     return(
-        <header className="flex items-center justify-between py-5 relative">
+        <header className="flex items-center justify-between py-5 relative fixed top-0">
             <div className="w-2/5 md:w-1/6">
                 <img className="" src={Logo} alt="" />
             </div>
@@ -32,7 +32,7 @@ export function Header(){
             </nav>
 
             <div className={`fixed top-0 right-0 z-2 lg:hidden SUBMENU overflow-hidden py-5 text-white h-screen w-3/5 ${ isOpen ? `VISIBLE` : `HIDDEN` }`}>
-                <div className="text-center flex items-center justify-between px-3"><h3>SubMenu</h3> <i class={`fa-solid fa-xmark cursor-pointer hover:text-orange-500 ${ isOpen ? `` : `text-orange-500` }`} onClick={() => {setIsOpen(!isOpen)}}></i></div>
+                <div className="text-center flex items-center justify-between px-3 italic font-bold"><h3>SubMenu</h3> <i class={`fa-solid fa-xmark cursor-pointer hover:text-orange-500 text-xl ${ isOpen ? `` : `text-orange-500` }`} onClick={() => {setIsOpen(!isOpen)}}></i></div>
                 <ul className="mt-15 px-2">
                     <li><a href="#" className={`border-2 border-orange-500 hover:px-4 hover:bg-white hover:text-orange-500 rounded-md block mt-2 py-1 px-2`}>Home</a></li>
                     <li><a href="#" className={`border-2 border-orange-500 hover:px-4 hover:bg-white hover:text-orange-500 rounded-md block mt-2 py-1 px-2`}>About Us</a></li>
@@ -52,7 +52,7 @@ export function Header(){
                     </div>
                 </div>
 
-                <img className="absolute bottom-0 rotate-180" src={bg_top} alt="" />
+                <img className="absolute top-0 -z-1" src={bg_top} alt="" />
             </div>
         </header>
     )
