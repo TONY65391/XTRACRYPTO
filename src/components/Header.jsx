@@ -7,7 +7,7 @@ export function Header(){
     const [isOpen, setIsOpen] = useState(false);
 
     return(
-        <header className="flex items-center justify-between py-5 relative fixed top-0">
+        <header className="flex items-center justify-between py-5 relative w-95/100 m-auto fixed top-0">
             <div className="w-2/5 md:w-1/6">
                 <img className="" src={Logo} alt="" />
             </div>
